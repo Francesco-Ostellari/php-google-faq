@@ -69,11 +69,11 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
       </div>
       <div class="header-bottom">
         <ul class="ul-list">
-            <li> Introduzione </li>
-            <li> Norme sulla privacy </li>
-            <li> Termini di servizio </li>
-            <li> Tecnologie </li>
-            <li> Domande frequenti </li>
+          <li> Introduzione </li>
+          <li> Norme sulla privacy </li>
+          <li> Termini di servizio </li>
+          <li> Tecnologie </li>
+          <li> Domande frequenti </li>
         </ul>
       </div>
     </div>

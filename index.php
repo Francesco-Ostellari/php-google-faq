@@ -43,7 +43,7 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
         'answer' => "<p>In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a target='_blank' href='https://policies.google.com/privacy/key-terms#toc-terms-referrer-url'>URL referrer</a>. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili <a target='_blank' href='https://support.google.com/websearch/answer/173733'>qui</a>. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.<p>"
     ]
   ];
-  
+
 ?>
 
 <!DOCTYPE html>
@@ -52,9 +52,68 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Google FAQ</title>
 </head>
 <body>
-  
+  <!-- header -->
+  <header>
+    <div class="container-header">
+      <div class="header-top flex">
+        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+        <h1>Privacy e termini</h1>
+      </div>
+      <div class="header-bottom">
+        <ul class="ul-list">
+            <li> Introduzione </li>
+            <li> Norme sulla privacy </li>
+            <li> Termini di servizio </li>
+            <li> Tecnologie </li>
+            <li> Domande frequenti </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- /header -->
+
+  <!-- main -->
+  <main>
+    <div class="container-main">
+      <?php 
+      foreach ($faq as $text) {?>
+      <h2><?=$text['question']; ?></h2>
+      <div><?=$text['answer'] ?></div>
+      <?php } ?>
+    </div>
+  </main>
+  <!-- /main -->
+
+  <!-- footer -->
+  <footer>
+    <div class="container-footer flex">
+      <div class="footer-left">
+        <ul>
+          <li><a href="#"> Google </a></li>
+          <li><a href="#"> Tutto su Google </a></li>
+          <li><a href="#"> Privacy </a></li>
+          <li><a href="#"> Termini </a></li>
+        </ul>
+      </div>
+      <div class="footer-right flex">
+        <i class="fas fa-globe-europe"></i>
+        <select name="" id="">
+          <option value=""> Italian </option>
+          <option value=""> English </option>
+          <option value=""> Français </option>
+          <option value=""> Deutsch </option>
+        </select>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
 </body>
 </html>
